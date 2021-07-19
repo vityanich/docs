@@ -1,0 +1,2855 @@
+  <!DOCTYPE html>
+    <html lang="en">
+    <head>
+	 <meta charset="utf-8" />
+    <style>
+.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(171, 178, 191); background-color: rgb(40, 44, 52); overflow: auto; }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(124, 135, 156); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(82, 139, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(124, 135, 156); border-color: rgb(75, 83, 98); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(75, 83, 98); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(75, 83, 98); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(58, 63, 75); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(49, 54, 63); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(75, 83, 98) rgb(75, 83, 98) rgb(62, 68, 81); border-image: initial; background-color: rgb(58, 63, 75); }
+.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); overflow: scroll; }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { background-color: rgb(255, 255, 255); border-top: 1px solid rgb(204, 204, 204); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; background-color: rgba(0, 0, 0, 0.04); border-radius: 3px; }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: "&nbsp;"; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; background: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border-radius: 3px; }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; background-color: rgb(252, 252, 252); border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-image: initial; border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
+.markdown-preview .task-list-item-checkbox { position: absolute; margin: 0.25em 0px 0px -1.4em; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+.line-number.bracket-matcher.bracket-matcher {
+  color: #abb2bf;
+  background-color: #3a3f4b;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+pre.editor-colors {
+  background-color: #282c34;
+  color: #abb2bf;
+}
+pre.editor-colors .line.cursor-line {
+  background-color: rgba(153, 187, 255, 0.04);
+}
+pre.editor-colors .invisible {
+  color: #abb2bf;
+}
+pre.editor-colors .cursor {
+  border-left: 2px solid #528bff;
+}
+pre.editor-colors .selection .region {
+  background-color: #3e4451;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-bottom: 1px solid #528bff;
+  box-sizing: border-box;
+}
+pre.editor-colors .invisible-character {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .indent-guide {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .wrap-guide {
+  background-color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .find-result .region.region.region,
+pre.editor-colors .current-result .region.region.region {
+  border-radius: 2px;
+  background-color: rgba(82, 139, 255, 0.24);
+  transition: border-color 0.4s;
+}
+pre.editor-colors .find-result .region.region.region {
+  border: 2px solid transparent;
+}
+pre.editor-colors .current-result .region.region.region {
+  border: 2px solid #528bff;
+  transition-duration: .1s;
+}
+pre.editor-colors .gutter .line-number {
+  color: #636d83;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line {
+  color: #abb2bf;
+  background-color: #3a3f4b;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right {
+  color: #abb2bf;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #abb2bf;
+}
+.syntax--comment {
+  color: #5c6370;
+  font-style: italic;
+}
+.syntax--comment .syntax--markup.syntax--link {
+  color: #5c6370;
+}
+.syntax--entity.syntax--name.syntax--type {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: #98c379;
+}
+.syntax--keyword {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--control {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--operator {
+  color: #abb2bf;
+}
+.syntax--keyword.syntax--other.syntax--special-method {
+  color: #61afef;
+}
+.syntax--keyword.syntax--other.syntax--unit {
+  color: #d19a66;
+}
+.syntax--storage {
+  color: #c678dd;
+}
+.syntax--storage.syntax--type.syntax--annotation,
+.syntax--storage.syntax--type.syntax--primitive {
+  color: #c678dd;
+}
+.syntax--storage.syntax--modifier.syntax--package,
+.syntax--storage.syntax--modifier.syntax--import {
+  color: #abb2bf;
+}
+.syntax--constant {
+  color: #d19a66;
+}
+.syntax--constant.syntax--variable {
+  color: #d19a66;
+}
+.syntax--constant.syntax--character.syntax--escape {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--numeric {
+  color: #d19a66;
+}
+.syntax--constant.syntax--other.syntax--color {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--other.syntax--symbol {
+  color: #56b6c2;
+}
+.syntax--variable {
+  color: #e06c75;
+}
+.syntax--variable.syntax--interpolation {
+  color: #be5046;
+}
+.syntax--variable.syntax--parameter {
+  color: #abb2bf;
+}
+.syntax--string {
+  color: #98c379;
+}
+.syntax--string.syntax--regexp {
+  color: #56b6c2;
+}
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded {
+  color: #e5c07b;
+}
+.syntax--string.syntax--other.syntax--link {
+  color: #e06c75;
+}
+.syntax--punctuation.syntax--definition.syntax--comment {
+  color: #5c6370;
+}
+.syntax--punctuation.syntax--definition.syntax--method-parameters,
+.syntax--punctuation.syntax--definition.syntax--function-parameters,
+.syntax--punctuation.syntax--definition.syntax--parameters,
+.syntax--punctuation.syntax--definition.syntax--separator,
+.syntax--punctuation.syntax--definition.syntax--seperator,
+.syntax--punctuation.syntax--definition.syntax--array {
+  color: #abb2bf;
+}
+.syntax--punctuation.syntax--definition.syntax--heading,
+.syntax--punctuation.syntax--definition.syntax--identity {
+  color: #61afef;
+}
+.syntax--punctuation.syntax--definition.syntax--bold {
+  color: #e5c07b;
+  font-weight: bold;
+}
+.syntax--punctuation.syntax--definition.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--punctuation.syntax--section.syntax--embedded {
+  color: #be5046;
+}
+.syntax--punctuation.syntax--section.syntax--method,
+.syntax--punctuation.syntax--section.syntax--class,
+.syntax--punctuation.syntax--section.syntax--inner-class {
+  color: #abb2bf;
+}
+.syntax--support.syntax--class {
+  color: #e5c07b;
+}
+.syntax--support.syntax--type {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function.syntax--any-method {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--function {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--name.syntax--section {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--tag {
+  color: #e06c75;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #d19a66;
+}
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #61afef;
+}
+.syntax--meta.syntax--class {
+  color: #e5c07b;
+}
+.syntax--meta.syntax--class.syntax--body {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--method-call,
+.syntax--meta.syntax--method {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--definition.syntax--variable {
+  color: #e06c75;
+}
+.syntax--meta.syntax--link {
+  color: #d19a66;
+}
+.syntax--meta.syntax--require {
+  color: #61afef;
+}
+.syntax--meta.syntax--selector {
+  color: #c678dd;
+}
+.syntax--meta.syntax--separator {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--tag {
+  color: #abb2bf;
+}
+.syntax--underline {
+  text-decoration: underline;
+}
+.syntax--none {
+  color: #abb2bf;
+}
+.syntax--invalid.syntax--deprecated {
+  color: #523d14 !important;
+  background-color: #e0c285 !important;
+}
+.syntax--invalid.syntax--illegal {
+  color: white !important;
+  background-color: #e05252 !important;
+}
+.syntax--markup.syntax--bold {
+  color: #d19a66;
+  font-weight: bold;
+}
+.syntax--markup.syntax--changed {
+  color: #c678dd;
+}
+.syntax--markup.syntax--deleted {
+  color: #e06c75;
+}
+.syntax--markup.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--markup.syntax--heading {
+  color: #e06c75;
+}
+.syntax--markup.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
+  color: #61afef;
+}
+.syntax--markup.syntax--link {
+  color: #56b6c2;
+}
+.syntax--markup.syntax--inserted {
+  color: #98c379;
+}
+.syntax--markup.syntax--quote {
+  color: #d19a66;
+}
+.syntax--markup.syntax--raw {
+  color: #98c379;
+}
+.syntax--source.syntax--c .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--cpp .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--cs .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--css .syntax--property-name,
+.syntax--source.syntax--css .syntax--property-value {
+  color: #828997;
+}
+.syntax--source.syntax--css .syntax--property-name.syntax--support,
+.syntax--source.syntax--css .syntax--property-value.syntax--support {
+  color: #abb2bf;
+}
+.syntax--source.syntax--elixir .syntax--source.syntax--embedded.syntax--source {
+  color: #abb2bf;
+}
+.syntax--source.syntax--elixir .syntax--constant.syntax--language,
+.syntax--source.syntax--elixir .syntax--constant.syntax--numeric,
+.syntax--source.syntax--elixir .syntax--constant.syntax--definition {
+  color: #61afef;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--definition,
+.syntax--source.syntax--elixir .syntax--variable.syntax--anonymous {
+  color: #c678dd;
+}
+.syntax--source.syntax--elixir .syntax--parameter.syntax--variable.syntax--function {
+  color: #d19a66;
+  font-style: italic;
+}
+.syntax--source.syntax--elixir .syntax--quoted {
+  color: #98c379;
+}
+.syntax--source.syntax--elixir .syntax--keyword.syntax--special-method,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--section,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--source.syntax--empty {
+  color: #e06c75;
+}
+.syntax--source.syntax--elixir .syntax--readwrite.syntax--module .syntax--punctuation {
+  color: #e06c75;
+}
+.syntax--source.syntax--elixir .syntax--regexp.syntax--section,
+.syntax--source.syntax--elixir .syntax--regexp.syntax--string {
+  color: #be5046;
+}
+.syntax--source.syntax--elixir .syntax--separator,
+.syntax--source.syntax--elixir .syntax--keyword.syntax--operator {
+  color: #d19a66;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--constant {
+  color: #e5c07b;
+}
+.syntax--source.syntax--elixir .syntax--array,
+.syntax--source.syntax--elixir .syntax--scope,
+.syntax--source.syntax--elixir .syntax--section {
+  color: #828997;
+}
+.syntax--source.syntax--gfm .syntax--markup {
+  -webkit-font-smoothing: auto;
+}
+.syntax--source.syntax--gfm .syntax--link .syntax--entity {
+  color: #61afef;
+}
+.syntax--source.syntax--go .syntax--storage.syntax--type.syntax--string {
+  color: #c678dd;
+}
+.syntax--source.syntax--ini .syntax--keyword.syntax--other.syntax--definition.syntax--ini {
+  color: #e06c75;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--type {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--keyword.syntax--operator.syntax--instanceof {
+  color: #c678dd;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair {
+  color: #e06c75;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair > .syntax--punctuation {
+  color: #abb2bf;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--delete,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--in,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--of,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--instanceof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--new,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--typeof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--void {
+  color: #c678dd;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation.syntax--string {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation {
+  color: #98c379;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--constant.syntax--language.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--constant.syntax--language.syntax--json {
+  color: #56b6c2;
+}
+.syntax--source.syntax--ruby .syntax--constant.syntax--other.syntax--symbol > .syntax--punctuation {
+  color: inherit;
+}
+.syntax--source.syntax--php .syntax--class.syntax--bracket {
+  color: #abb2bf;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--logical.syntax--python {
+  color: #c678dd;
+}
+.syntax--source.syntax--python .syntax--variable.syntax--parameter {
+  color: #d19a66;
+}
+
+    </style>
+</head>
+<body class="markdown-preview" data-use-github-style=""><h2 id="-">Выставлене и оплата счета с банковской карты</h2>
+<p>Адрес тестовой среды ( далее <strong>{{url}}</strong> ):
+<a href="https://api.yii2-stage.test.wooppay.com">https://api.yii2-stage.test.wooppay.com</a></p>
+<p>Адрес боевой среды:
+<a href="https://api-core.wooppay.com">https://api-core.wooppay.com</a></p>
+<blockquote>
+<p>Содержание:</p>
+</blockquote>
+<ul>
+<li><a href="#scenario">Сценарий</a></li>
+<li>1.<a href="#auth">Авторизация</a></li>
+<li>2.<a href="#invoice">Выставление счета на оплату</a></li>
+<li>3.<a href="#getInvoceData">Запрос данных по вставленному счету на оплату</a></li>
+<li>4.<a href="#getService">Запрос данных о сервисах выставления счета на оплату</a></li>
+<li>5.<a href="#getCommission">Запрос комиссии</a></li>
+<li>6.<a href="#card">Работа с карточными данными</a></li>
+<li>7.<a href="#payment">Оплата выставленного счета на оплату</a></li>
+<li>8.<a href="#receipt">Запрос статуса операции и чека</a></li>
+<li>9.<a href="#refund">Возврат по операции</a></li>
+<li><a href="#pdf">Чек операции(в формате PDF)</a></li>
+<li><a href="#status">Возможные статусы операций</a></li>
+<li><a href="#operation_type">Типы операций</a></li>
+<li><a href="#error_code">Коды ошибок error_code</a></li>
+<li><a href="#http">Возможные коды состояния HTTP</a></li>
+</ul>
+<p><a name="scenario"></a></p>
+<h2 id="-">Сценарий</h2>
+<ol>
+<li><a href="#auth">Авторизация мерчанта</a></li>
+<li><a href="#invoice">Выставление счета на оплату</a></li>
+<li><a href="#card">Привязка карты</a></li>
+<li><a href="#payment">Оплата вставленного счета на оплату</a></li>
+<li><a href="#receipt">Запрос статуса операции и чека</a></li>
+</ol>
+<h3 id="-">Внимание!</h3>
+<p><strong><em>После успешной авторизации полученный токен необходимо передавать в</em></strong> <code>Header</code> <strong><em>запроса в параметре</em></strong> <code>Authorization</code>
+<a name="auth"></a></p>
+<h2 id="1-">1. Авторизация</h2>
+<p>Авторизация происходит методом <strong>POST</strong> запроса</p>
+<p><strong>URL:</strong> {{url}}/v1/auth</p>
+<p><strong>Входные параметры:</strong></p>
+<p><strong>Headers:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content-Type</td>
+<td>application/json</td>
+</tr>
+<tr>
+<td>language</td>
+<td>ru (по умолчанию)</td>
+</tr>
+<tr>
+<td>Time-Zone</td>
+<td>Временная зона - по умолчанию время указано в UTC-0 (Пример: Asia/Almaty)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Body:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>login</td>
+<td>string</td>
+<td><em>Логин субъекта</em></td>
+</tr>
+<tr>
+<td>password</td>
+<td>string</td>
+<td><em>Пароль</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Возвращаемые параметры:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>parent_login</td>
+<td>string</td>
+<td><em>Логин родительского субъекта</em></td>
+</tr>
+<tr>
+<td>subject_type</td>
+<td>int</td>
+<td><em>Тип авторизованного субъекта</em></td>
+</tr>
+<tr>
+<td>country</td>
+<td>int</td>
+<td><em>ID страны</em></td>
+</tr>
+<tr>
+<td>id</td>
+<td>int</td>
+<td><em>ID авторизованного субъекта</em></td>
+</tr>
+<tr>
+<td>login</td>
+<td>string</td>
+<td><em>Логин авторизованного субъекта</em></td>
+</tr>
+<tr>
+<td>status</td>
+<td>int</td>
+<td><em>Статус авторизованного субъекта</em></td>
+</tr>
+<tr>
+<td>roles</td>
+<td>массив со string внутри</td>
+<td><em>Роли авторизованного субъекта</em></td>
+</tr>
+<tr>
+<td>assignments</td>
+<td>string</td>
+<td><em>Внутренняя система ролей</em></td>
+</tr>
+<tr>
+<td>token</td>
+<td>string</td>
+<td><em>Уникальный авторизационный токен</em></td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td><em>Почта авторизованного субъекта</em></td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>string</td>
+<td><em>Дата и время авторизации</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Пример запроса:</strong></p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">"login"</span>:<span class="hljs-string">"login"</span>,
+    <span class="hljs-attr">"password"</span>:<span class="hljs-string">"password"</span>
+}
+</code></pre>
+<p><strong>Пример успешного ответа:</strong></p>
+<p>HTTP status code: 200 OK - Успешно. Запрошенный ресурс был найден и передан в теле ответа</p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">"parent_login"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"subject_type"</span>: <span class="hljs-number">2000</span>,
+    <span class="hljs-attr">"country"</span>: <span class="hljs-number">4</span>,
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">123456</span>,
+    <span class="hljs-attr">"login"</span>: <span class="hljs-string">"login"</span>,
+    <span class="hljs-attr">"status"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"roles"</span>: [
+        <span class="hljs-string">"someRole"</span>,
+        <span class="hljs-string">"someRole1"</span>
+    ],
+    <span class="hljs-attr">"assignments"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"token"</span>: <span class="hljs-string">"jwt eyJraWQiOiJrZX......dG9yIl19"</span>,
+    <span class="hljs-attr">"email"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-05-29T05:01:12+0000"</span>
+}
+</code></pre>
+<blockquote>
+<p>Параметр &quot;token&quot; - сгенерированный авторизационный токен. Предназначен для последующих запросов.</p>
+</blockquote>
+<p><em>Авторизационный токен:</em>  </p>
+<pre><code class="lang-json">
+    <span class="hljs-string">"token"</span>: <span class="hljs-string">"jwt eyJraWQiOiJrZX......dG9yIl19"</span>
+</code></pre>
+<p><a name="invoice"></a></p>
+<h2 id="2-">2. Выставление счета на оплату</h2>
+<p>Выставление счета на оплату происходит методом <strong>POST</strong> запроса</p>
+<p><strong>URL:</strong> {{url}}/v1/invoice/create</p>
+<p><strong>Входные параметры:</strong></p>
+<p><strong>Headers:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content-Type</td>
+<td>application/json</td>
+</tr>
+<tr>
+<td>language</td>
+<td>ru (по умолчанию)</td>
+</tr>
+<tr>
+<td>Time-Zone</td>
+<td>Временная зона - по умолчанию время указано в UTC-0 (Пример: Asia/Almaty)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Body:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>reference_id</td>
+<td>string</td>
+<td><em>Индивидуальный номер операции</em></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>double</td>
+<td><em>Сумма пополнения</em></td>
+</tr>
+<tr>
+<td>death_date</td>
+<td>YYYY-MM-DD hh:mm:ss</td>
+<td><em>Дата закрытия инвойса</em></td>
+</tr>
+<tr>
+<td>merchant_name</td>
+<td>string</td>
+<td><em>логин мерчанта, получателя</em></td>
+</tr>
+<tr>
+<td>request_url</td>
+<td>string</td>
+<td><em>запрос, который выполнит Wooppay после успешной оплаты. Спецсимволы - необходимо url-кодировать. Возможно отправлять GET и POST запросы. Пример POST {&quot;url&quot;:&quot;https:\/\/www.test.com\/test.php&quot;,&quot;type&quot;:&quot;POST&quot;}</em></td>
+</tr>
+<tr>
+<td>back_url</td>
+<td>string</td>
+<td><em>адрес, на который будет переадресован пользователь после оплаты</em></td>
+</tr>
+<tr>
+<td>option</td>
+<td>integer</td>
+<td><em>тип инвойса. 4 Оплата с карты, карта будет привязана к номеру указанному в user_phone</em></td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+<td><em>Описание инвойса</em></td>
+</tr>
+<tr>
+<td>user_phone</td>
+<td>string</td>
+<td><em>Номер телефона пользователя</em></td>
+</tr>
+<tr>
+<td>service_name</td>
+<td>string</td>
+<td><em>Системное имя сервиса</em></td>
+</tr>
+<tr>
+<td>card_forbidden</td>
+<td>boolean</td>
+<td><em>Запрет оплаты с карты</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Возвращаемые параметры:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>operationUrl</td>
+<td>string</td>
+<td><em>Ссылка для оплаты инвойса</em></td>
+</tr>
+<tr>
+<td>operation_id</td>
+<td>string</td>
+<td><em>Индивидуальный номер операции</em></td>
+</tr>
+<tr>
+<td>invoice_id</td>
+<td>string</td>
+<td><em>ID инвойса</em></td>
+</tr>
+<tr>
+<td>key</td>
+<td>string</td>
+<td><em>Ключ необходимый для оплаты инвойса</em></td>
+</tr>
+</tbody>
+</table>
+<p>requestUrl
+Адрес на котором сервер мерчанта ждет уведомления об успешной оплате инвойса. По умолчанию выполняется GET запрос на указанный URL. Если необходимо выполнить POST запрос, то в requestUrl нужно передать JSON с параметрами url и type, где url — url на который ожидается уведомление, type — тип запроса. Уведомление отработает, сразу, как пользователь выполнит оплату заказа и операция проведется в системе WOOPPAY. Запросы выполняются 120 раз, каждую минуту, до получения от сервера мерчанта ответа в виде JSON {&quot;data&quot;:1}. После истечения 120 попыток — запросы прекращаются.</p>
+<p><strong>Пример запроса:</strong></p>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">"reference_id"</span> : <span class="hljs-string">"{{$timestamp}}"</span>,
+  <span class="hljs-attr">"amount"</span> : <span class="hljs-string">"10"</span>,
+  <span class="hljs-attr">"user_phone"</span>: <span class="hljs-string">"{{wallet_login}}"</span>,
+  <span class="hljs-attr">"email"</span>: <span class="hljs-string">"example@example.com"</span>,
+  <span class="hljs-attr">"merchant_name"</span> : <span class="hljs-string">"{{merchant_login}}"</span>,
+  <span class="hljs-attr">"request_url"</span>: {
+          <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://test.ol3g.ru/"</span>,
+          <span class="hljs-attr">"type"</span>:<span class="hljs-string">"POST"</span>},
+  <span class="hljs-attr">"back_url"</span>: <span class="hljs-string">"https://www.test.wooppay.com"</span>,
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"auto_tets"</span>,
+  <span class="hljs-attr">"death_date"</span>: <span class="hljs-string">"2025-12-25 22:42:03"</span>,
+  <span class="hljs-attr">"option"</span>: <span class="hljs-string">"4"</span>
+}
+</code></pre>
+<p><strong>Пример успешного ответа:</strong></p>
+<p>HTTP status code: 200 OK - Успешно. Запрошенный ресурс был найден и передан в теле ответа</p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">"operation_url"</span>: <span class="hljs-string">"https://www.test.wooppay.com/invoice/operation?id=246170&amp;key=a009d7a852c67be8265592b95d87da01"</span>,
+    <span class="hljs-attr">"response"</span>: {
+        <span class="hljs-attr">"operation_id"</span>: <span class="hljs-string">"50866663"</span>,
+        <span class="hljs-attr">"invoice_id"</span>: <span class="hljs-string">"246170"</span>,
+        <span class="hljs-attr">"key"</span>: <span class="hljs-string">"a009d7a852c67be8265592b95d87da01"</span>
+    }
+}
+</code></pre>
+<p><a name="getInvoceData"></a></p>
+<h2 id="3-">3. Запрос данных по выставленному счету на оплату</h2>
+<p>Запрос данных по выставленному счету на оплату происходит методом <strong>GET</strong> запроса</p>
+<p><strong>URL:</strong> {{url}}/v1/invoice?id={{invoice_id}}&amp;key={{key}}</p>
+<p>где
+<strong>invoice_id</strong> - invoice_id с шага 2
+<strong>key</strong> - key с шага 2</p>
+<p><strong>Входные параметры:</strong></p>
+<p><strong>Headers:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content-Type</td>
+<td>application/json</td>
+</tr>
+<tr>
+<td>language</td>
+<td>ru (по умолчанию)</td>
+</tr>
+<tr>
+<td>Time-Zone</td>
+<td>Временная зона - по умолчанию время указано в UTC-0 (Пример: Asia/Almaty)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Params:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>invoice_id</td>
+<td>string</td>
+<td><em>ID инвойса</em></td>
+</tr>
+<tr>
+<td>key</td>
+<td>string</td>
+<td><em>Ключ необходимый для оплаты инвойса</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Возвращаемые параметры:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>invoice_id</td>
+<td>string</td>
+<td><em>ID инвойса</em></td>
+</tr>
+<tr>
+<td>merchant_name</td>
+<td>string</td>
+<td><em>Имя мерчанта</em></td>
+</tr>
+<tr>
+<td>operation_id</td>
+<td>string</td>
+<td><em>ID операции</em></td>
+</tr>
+<tr>
+<td>reference_id</td>
+<td>string</td>
+<td><em>Внешний ID операции</em></td>
+</tr>
+<tr>
+<td>back_url</td>
+<td>string</td>
+<td><em>адрес, на который будет переадресован пользователь после оплаты</em></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>float</td>
+<td><em>Сумма</em></td>
+</tr>
+<tr>
+<td>key</td>
+<td>string</td>
+<td><em>Ключ необходимый для оплаты инвойса</em></td>
+</tr>
+<tr>
+<td>status</td>
+<td>string</td>
+<td><em>Статус инвойса</em></td>
+</tr>
+<tr>
+<td>option</td>
+<td>int</td>
+<td><em>тип инвойса. 4 Оплата с карты, карта будет привязана к номеру указанному в user_phone</em></td>
+</tr>
+<tr>
+<td>user_phone</td>
+<td>string</td>
+<td><em>Номер телефона пользователя</em></td>
+</tr>
+<tr>
+<td>card_forbidden</td>
+<td>string</td>
+<td><em>Запрет оплаты с карты</em></td>
+</tr>
+<tr>
+<td>service_id</td>
+<td>int</td>
+<td><em>ID сервиса для выставления счета</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Пример запроса:</strong></p>
+<pre><code class="lang-json">{{url}}/v1/invoice?id={{invoice_id}}&amp;key={{key}}
+</code></pre>
+<p><strong>Пример успешного ответа:</strong></p>
+<p>HTTP status code: 200 OK - Успешно. Запрошенный ресурс был найден и передан в теле ответа</p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">"invoice_id"</span>: <span class="hljs-number">81296</span>,
+    <span class="hljs-attr">"merchant_name"</span>: <span class="hljs-string">"merchant_oleg"</span>,
+    <span class="hljs-attr">"operation_id"</span>: <span class="hljs-string">"50468298"</span>,
+    <span class="hljs-attr">"reference_id"</span>: <span class="hljs-string">"1589373648"</span>,
+    <span class="hljs-attr">"back_url"</span>: <span class="hljs-string">"https://www.test.wooppay.com"</span>,
+    <span class="hljs-attr">"amount"</span>: <span class="hljs-number">10</span>,
+    <span class="hljs-attr">"key"</span>: <span class="hljs-string">"0fc02ebaf78733506783e799c63dae51"</span>,
+    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"0"</span>,
+    <span class="hljs-attr">"status"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"option"</span>: <span class="hljs-number">4</span>,
+    <span class="hljs-attr">"user_phone"</span>: <span class="hljs-string">"77013451234"</span>,
+    <span class="hljs-attr">"acquiring_access"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"card_forbidden"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"service_id"</span>: <span class="hljs-number">2705</span>
+}
+</code></pre>
+<p><a name="getService"></a></p>
+<h2 id="4-">4. Запрос данных о сервисах выставления счета на оплату</h2>
+<p>Запрос данных о сервисах выставления счета на оплату происходит методом <strong>GET</strong> запроса</p>
+<p><strong>URL:</strong> {{url}}/v1/service?status=3&amp;expand=params</p>
+<p><strong>Входные параметры:</strong></p>
+<p><strong>Headers:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content-Type</td>
+<td>application/json</td>
+</tr>
+<tr>
+<td>language</td>
+<td>ru (по умолчанию)</td>
+</tr>
+<tr>
+<td>Time-Zone</td>
+<td>Временная зона - по умолчанию время указано в UTC-0 (Пример: Asia/Almaty)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Возвращаемые параметры:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>string</td>
+<td><em>ID сервиса</em></td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td><em>Имя сервиса</em></td>
+</tr>
+<tr>
+<td>parent_id</td>
+<td>int</td>
+<td><em>ID родительского сервиса (если есть)</em></td>
+</tr>
+<tr>
+<td>title</td>
+<td>string</td>
+<td><em>Название сервиса</em></td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+<td><em>Описание</em></td>
+</tr>
+<tr>
+<td>description_company</td>
+<td>string</td>
+<td><em>Описание компании</em></td>
+</tr>
+<tr>
+<td>commission_info</td>
+<td>string</td>
+<td><em>Информация о комиссии</em></td>
+</tr>
+<tr>
+<td>picture</td>
+<td>string</td>
+<td><em>Логотип</em></td>
+</tr>
+<tr>
+<td>synonyms</td>
+<td>int</td>
+<td><em>Синонимы для сервиса</em></td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td><em>Тип сервиса</em></td>
+</tr>
+<tr>
+<td>status</td>
+<td>string</td>
+<td><em>Статус сервиса</em></td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>int</td>
+<td><em>Последняя дата модификации сервиса</em></td>
+</tr>
+<tr>
+<td>picture_url</td>
+<td>int</td>
+<td><em>URL к логотипу</em></td>
+</tr>
+<tr>
+<td>params{service_id}</td>
+<td>string</td>
+<td><em>ID сервиса</em></td>
+</tr>
+<tr>
+<td>params{banner_img}</td>
+<td>string</td>
+<td><em>Картинка баннера</em></td>
+</tr>
+<tr>
+<td>params{page_background_color}</td>
+<td>string</td>
+<td><em>Цвет фона сервиса (если он есть)</em></td>
+</tr>
+<tr>
+<td>params{page_background_url}</td>
+<td>string</td>
+<td><em>Картинка фона сервиса</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Пример запроса:</strong></p>
+<pre><code class="lang-json">{{url}}<span class="hljs-meta-keyword">/v1/</span>service?status=<span class="hljs-number">3</span><span class="hljs-variable">&amp;expand</span>=params
+</code></pre>
+<p><strong>Пример успешного ответа:</strong></p>
+<p>HTTP status code: 200 OK - Успешно. Запрошенный ресурс был найден и передан в теле ответа</p>
+<pre><code class="lang-json">[
+    {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-number">5925</span>,
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"native_merch_invoice"</span>,
+        <span class="hljs-attr">"parent_id"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Выставление счета от \"native_merch\""</span>,
+        <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Оплата счета на сайте \"native_merch\""</span>,
+        <span class="hljs-attr">"description_company"</span>: <span class="hljs-string">"&lt;p&gt;TOO \"native_merch\"&lt;/p&gt;"</span>,
+        <span class="hljs-attr">"commission_info"</span>: <span class="hljs-string">"&lt;p&gt;Комиссия по сервису равна нулю!&lt;/p&gt;"</span>,
+        <span class="hljs-attr">"picture"</span>: <span class="hljs-string">"11589379011.9050x100.png"</span>,
+        <span class="hljs-attr">"synonyms"</span>: [],
+        <span class="hljs-attr">"type"</span>: <span class="hljs-number">4</span>,
+        <span class="hljs-attr">"terminal_type"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"status"</span>: <span class="hljs-number">3</span>,
+        <span class="hljs-attr">"template"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"is_simple"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"priority"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-05-13T19:54:42+0000"</span>,
+        <span class="hljs-attr">"fields"</span>: [],
+        <span class="hljs-attr">"categories"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"children"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"parent"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"blacklist"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"country_code"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">"acquiring_access"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">"params"</span>: {
+            <span class="hljs-attr">"service_id"</span>: <span class="hljs-number">5925</span>,
+            <span class="hljs-attr">"banner_img"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"banner_link"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"back_url"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"request_url"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"page_background_color"</span>: <span class="hljs-string">""</span>,
+            <span class="hljs-attr">"page_background_url"</span>: <span class="hljs-string">"21589379011.249787x100.png"</span>
+        },
+        <span class="hljs-attr">"subject"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"picture_url"</span>: <span class="hljs-string">"https://static.test.wooppay.com/service/11589379011.9050x100.png"</span>
+    }
+]
+</code></pre>
+<p><a name="getCommission"></a></p>
+<h2 id="5-">5. Запрос комиссии</h2>
+<p>Запрос комиссии происходит методом <strong>POST</strong> запроса</p>
+<p><strong>URL:</strong> {{url}}/commission/{{service_name}}</p>
+<p>где: {{service_name}} - имя сервиса</p>
+<p><strong>Входные параметры:</strong></p>
+<p><strong>Headers:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content-Type</td>
+<td>application/json</td>
+</tr>
+<tr>
+<td>Language</td>
+<td>ru (по умолчанию)</td>
+</tr>
+<tr>
+<td>Time-Zone</td>
+<td>Временная зона - по умолчанию время указано в UTC-0 (Пример: Asia/Almaty)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Body:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>amount</td>
+<td>float</td>
+<td>Сумма</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Возвращаемые параметры:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>amount</td>
+<td>float</td>
+<td>Сумма комиссии</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Пример запроса:</strong></p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">"amount"</span>: <span class="hljs-number">1000</span>
+}
+</code></pre>
+<p><strong>Пример успешного ответа:</strong></p>
+<p>HTTP status code: 200 OK - Успешно. Запрошенный ресурс был найден и передан в теле ответа</p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">"amount"</span>: <span class="hljs-number">100</span>
+}
+</code></pre>
+<p><a name="card"></a></p>
+<h2 id="6-">6. Работа с карточными данными</h2>
+<h2 id="-">Важно</h2>
+<p>При работе с фреймами в приложениях взаимодействие происходит на нескольких уровнях. Так положительные или отрицательные моменты взвимодействия возможно отловить на таких уровнях:</p>
+<h3 id="-frame-js-call-"><em>На уровне всплывающего сообщения внутри frame и на уровне JS-CALL:</em></h3>
+<p>1) Ошибка на уровне валидации - визуальная, всплывающее сообщение (Пример: &quot;Введите корректные карточные данные &quot;)</p>
+<p>2) Ответ после отправки данных в виде js-call</p>
+<pre><code>js-<span class="hljs-keyword">call</span>://message?<span class="hljs-keyword">data</span>=<span class="hljs-number">1</span> - <span class="hljs-keyword">success</span> - данные ушли на обработку
+js-<span class="hljs-keyword">call</span>://message?<span class="hljs-keyword">data</span>=<span class="hljs-number">2</span> - authorisation_error
+js-<span class="hljs-keyword">call</span>://message?<span class="hljs-keyword">data</span>=<span class="hljs-number">3</span>&amp;<span class="hljs-keyword">error</span>=................ - result_error - ошибка при обработке данных.
+js-<span class="hljs-keyword">call</span>://message?<span class="hljs-keyword">data</span>=<span class="hljs-number">4</span> - result_load - возможный промежуточный статус между <span class="hljs-number">1</span>,<span class="hljs-number">2</span> и <span class="hljs-number">3</span>
+</code></pre><h3 id="-frame-postmessage-"><em>На уровне всплывающего сообщения внутри frame и на уровне PostMessage:</em></h3>
+<p>1) Ошибка на уровне валидации - визуальная, всплывающее сообщение (Пример: &quot;Введите корректные карточные данные &quot;)</p>
+<p>2) Ответы на уровне PostMessage</p>
+<p>Ответы на уровне PostMessage возможно обработать по средствам javascript
+Пример обработки:</p>
+<pre><code><span class="hljs-keyword">var</span> functionName = <span class="hljs-string">'rechargeReceiver'</span>;
+      <span class="hljs-keyword">var</span> frameType = <span class="hljs-string">'recharge'</span>;
+      <span class="hljs-keyword">var</span> frame_result_load = <span class="hljs-string">'4'</span>;
+      <span class="hljs-keyword">var</span> frame_result_success = <span class="hljs-string">'1'</span>;
+      <span class="hljs-keyword">var</span> frame_result_error = <span class="hljs-string">'3'</span>;
+      <span class="hljs-keyword">var</span> frame_result_authorisation_error = <span class="hljs-string">'2'</span>;
+      <span class="hljs-keyword">var</span> frame_result_form_send = <span class="hljs-string">'8'</span>;
+
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> functionName != <span class="hljs-string">"function"</span>) {
+         functionName = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">event</span>) </span>{
+          <span class="hljs-keyword">if</span> (event.data) {
+            <span class="hljs-keyword">var</span> message = <span class="hljs-built_in">JSON</span>.parse(event.data);
+            <span class="hljs-keyword">if</span> (message &amp;&amp; message.source == frameType) {
+              <span class="hljs-keyword">var</span> err_info = <span class="hljs-string">""</span>;
+              <span class="hljs-keyword">if</span> (message.data &amp;&amp; <span class="hljs-keyword">typeof</span> message.data.errorCode != <span class="hljs-string">"undefined"</span>) {
+                <span class="hljs-keyword">var</span> errors_text = {<span class="hljs-string">"e_04"</span>:<span class="hljs-string">"Карта заблокирована. Для снятия ограничений, позвоните в Колл-центр вашего банка."</span>,<span class="hljs-string">"e_05"</span>:<span class="hljs-string">"Транзакция отклонена. Позвоните в Колл-центр вашего банка."</span>,<span class="hljs-string">"e_07"</span>:<span class="hljs-string">"Карта заблокирована. Для снятия ограничений, позвоните в Колл-центр вашего банка."</span>,<span class="hljs-string">"e_12"</span>:<span class="hljs-string">"Недействительная транзакция, перепроверьте введенные данные. В случае повторения ошибки попробуйте позже..."</span>,<span class="hljs-string">"e_14"</span>:<span class="hljs-string">"Недействительный номер карты."</span>,<span class="hljs-string">"e_15"</span>:<span class="hljs-string">"Недействительный номер карты."</span>,<span class="hljs-string">"e_19"</span>:<span class="hljs-string">"Ошибка авторизации."</span>,<span class="hljs-string">"e_30"</span>:<span class="hljs-string">"Переданы неверные данные для оплаты\/пополнения. Обратитесь в службу поддержки."</span>,<span class="hljs-string">"e_36"</span>:<span class="hljs-string">"Карта заблокирована. Для снятия ограничений, позвоните в Колл-центр вашего банка."</span>,<span class="hljs-string">"e_37"</span>:<span class="hljs-string">"По карте выставлены ограничения. Для снятия ограничений, позвоните в Колл-центр вашего банка."</span>,<span class="hljs-string">"e_41"</span>:<span class="hljs-string">"Карта, числится в базе утерянных. Позвоните в Колл-центр вашего банка."</span>,<span class="hljs-string">"e_43"</span>:<span class="hljs-string">"Карта, числится в базе утерянных. Позвоните в Колл-центр вашего банка."</span>,<span class="hljs-string">"e_45"</span>:<span class="hljs-string">"Карта, числится в базе украденых. Позвоните в Колл-центр вашего банка, либо обратиться в ближайшее отделение полиции."</span>,<span class="hljs-string">"e_51"</span>:<span class="hljs-string">"Недостаточно средств на карте."</span>,<span class="hljs-string">"e_54"</span>:<span class="hljs-string">"Истёк срок действия карты."</span>,<span class="hljs-string">"e_57"</span>:<span class="hljs-string">"Карта закрыта для интернет-транзакций. Обратитесь в ваш банк."</span>,<span class="hljs-string">"e_58"</span>:<span class="hljs-string">"Операции с картами временно приостановлены. Попробуйте позже."</span>,<span class="hljs-string">"e_61"</span>:<span class="hljs-string">"Сумма превышает допустимый суточный лимит. Можете обратиться в службу поддержки, либо завершить операцию завтра."</span>,<span class="hljs-string">"e_62"</span>:<span class="hljs-string">"Карта заблокирована банком. Позвоните в Колл-центр вашего банка."</span>,<span class="hljs-string">"e_91"</span>:<span class="hljs-string">"Ваш банк временно не доступен. Попробуйте оплатить позже."</span>,<span class="hljs-string">"e_96"</span>:<span class="hljs-string">"Не установлен 3DSecure(SecureCode) либо сбой связи. Позвоните в Колл-центр вашего банка."</span>};
+                <span class="hljs-keyword">var</span> err_key = <span class="hljs-string">"e_"</span> + message.data.errorCode;
+                <span class="hljs-keyword">if</span>(err_key <span class="hljs-keyword">in</span> errors_text){
+                  err_info = errors_text[err_key];
+                }
+              }
+              <span class="hljs-keyword">if</span> (message.status == frame_result_load) {
+                                <span class="hljs-comment">// место реакции на завершение рендера фрейма</span>
+                 <span class="hljs-built_in">window</span>.location = <span class="hljs-string">"js-call://message?data=4"</span>;<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"load"</span>);
+              } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (message.status == frame_result_success){
+<span class="hljs-comment">//место реакции на событие успешной валидация и отправки карточной формы</span>
+    <span class="hljs-keyword">var</span> referenceId = <span class="hljs-string">""</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-string">"data"</span> <span class="hljs-keyword">in</span> message){
+         referenceId = <span class="hljs-string">"referenceId"</span> <span class="hljs-keyword">in</span> message.data ? <span class="hljs-string">"&amp;reference="</span> + message.data.referenceId : <span class="hljs-string">""</span>;
+    }
+    <span class="hljs-built_in">window</span>.location = <span class="hljs-string">"js-call://message?data=1"</span> + referenceId;
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"success"</span>);
+              } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (message.status == frame_result_error) {
+<span class="hljs-comment">// место реакции на ошибку фрейма</span>
+                <span class="hljs-keyword">if</span> (err_info == <span class="hljs-string">""</span>) {
+                  err_info = <span class="hljs-string">"Произошла ошибка. Скорее всего вы ввели некорректные данные карты"</span>;
+                }
+                 <span class="hljs-built_in">window</span>.location = <span class="hljs-string">"js-call://message?data=3&amp;error="</span> + <span class="hljs-built_in">encodeURI</span>(err_info);<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"err "</span>+<span class="hljs-built_in">encodeURI</span>(err_info));
+              } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (message.status == frame_result_authorisation_error) {
+                                <span class="hljs-comment">//место реакции на неверную авторицию фрейма.</span>
+                <span class="hljs-keyword">if</span> (err_info == <span class="hljs-string">""</span>) {
+                  err_info = <span class="hljs-string">"Произошла ошибка. Возможно вы ввели некорректные данные карты"</span>;
+                }
+                <span class="hljs-built_in">window</span>.location = <span class="hljs-string">"js-call://message?data=2&amp;error="</span> + <span class="hljs-built_in">encodeURI</span>(err_info);<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"auth_err "</span>+<span class="hljs-built_in">encodeURI</span>(err_info));
+              } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (message.status == frame_result_form_send) {
+                                <span class="hljs-comment">//место реакции на событие отправки формы</span>
+               <span class="hljs-built_in">window</span>.location = <span class="hljs-string">"js-call://message?data=8&amp;error="</span> + <span class="hljs-built_in">encodeURI</span>(err_info);<span class="hljs-built_in">console</span>.log(<span class="hljs-string">"send_err "</span>+<span class="hljs-built_in">encodeURI</span>(err_info));
+              }
+            }
+          }
+        };
+        <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">"message"</span>, functionName, <span class="hljs-literal">false</span>);
+      }
+</code></pre><h3 id="6-1-">6.1 Привязка карты</h3>
+<p>Сценарий оплаты:</p>
+<ol>
+<li>Псевдо авторизация (6 пункт содержания)</li>
+<li>Первый шаг привязки карты</li>
+<li>Второй шаг привязки карты (Авторизация на сервере обработки карточных данных)</li>
+<li>Третий шаг привязки карты (Передача карточных данных)</li>
+<li>Ввод 3DS на странице банковского процессинга</li>
+<li>Подтверждение привязки (карта без 3DS)</li>
+</ol>
+<h6 id="1-">1.</h6>
+<p>Псевдо авторизация (6 пункт содержания)</p>
+<h6 id="2-">2.</h6>
+<p>Первый шаг привязки карты:</p>
+<p><strong>POST</strong> запрос</p>
+<p><strong>URL:</strong> {{url}}/v1/card/native-attach</p>
+<p><strong>Входные параметры:</strong></p>
+<p><strong>Headers:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content-Type</td>
+<td>application/json</td>
+</tr>
+<tr>
+<td>language</td>
+<td>ru (по умолчанию)</td>
+</tr>
+<tr>
+<td>Time-Zone</td>
+<td>Временная зона - по умолчанию время указано в UTC-0 (Пример: Asia/Almaty)</td>
+</tr>
+<tr>
+<td>partner-name</td>
+<td>системное имя партнера</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Возвращаемые параметры:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>form_action</td>
+<td>string</td>
+<td><em>URL для авторизации на сервере обработки карточных данных</em></td>
+</tr>
+<tr>
+<td>form_method</td>
+<td>string</td>
+<td><em>Метод запроса для авторизации на сервере обработки карточных данных</em></td>
+</tr>
+<tr>
+<td>current_user</td>
+<td>string</td>
+<td><em>Кошелек плательщика</em></td>
+</tr>
+<tr>
+<td>card_operation_id</td>
+<td>string</td>
+<td><em>ID операции пополнения</em></td>
+</tr>
+<tr>
+<td>payment_operation</td>
+<td>string</td>
+<td><em>ID операции оплаты</em></td>
+</tr>
+<tr>
+<td>card_id</td>
+<td>string</td>
+<td><em>ID карты (Если был передан ID)</em></td>
+</tr>
+<tr>
+<td>fields</td>
+<td></td>
+<td><em>Набор данных необходимых для авторизации на сервере обработки карточных данных</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Пример запроса:</strong></p>
+<pre><code class="lang-json">{{url}}/v1/card/native-attach
+</code></pre>
+<p><strong>Пример успешного ответа:</strong></p>
+<p>HTTP status code: 200 OK - Успешно. Запрошенный ресурс был найден и передан в теле ответа</p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">"form_action"</span>: <span class="hljs-string">"https://pci-ws.wooppay.com/linking/app/logon"</span>,
+    <span class="hljs-attr">"form_method"</span>: <span class="hljs-string">"POST"</span>,
+    <span class="hljs-attr">"current_user"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"card_operation_id"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"payment_operation"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"mobile_scripts"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"card_id"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"fields"</span>: {
+        <span class="hljs-attr">"Signed_Order_B64"</span>: <span class="hljs-string">"PGRvY3VtZW50P.......50Pg=="</span>,
+        <span class="hljs-attr">"email"</span>: <span class="hljs-string">"example@example.com"</span>,
+        <span class="hljs-attr">"Language"</span>: <span class="hljs-string">"ru"</span>,
+        <span class="hljs-attr">"template"</span>: <span class="hljs-string">"wp-linking.xsl"</span>,
+        <span class="hljs-attr">"BackLink"</span>: <span class="hljs-string">"https://api.yii2-stage.test.wooppay.com/v1/card/check-acquiring-operation?operation_id=&amp;sign=PGRvY3Vt.....W50Pg%3D%3D"</span>,
+        <span class="hljs-attr">"FailureBackLink"</span>: <span class="hljs-string">"https://api.yii2-stage.test.wooppay.com/v1/card/check-acquiring-operation?operation_id=&amp;sign=PGRvY3V....%3D%3D"</span>,
+        <span class="hljs-attr">"PostLink"</span>: <span class="hljs-string">"https://api.yii2-stage.test.wooppay.com/card/linkedList"</span>,
+        <span class="hljs-attr">"FailurePostLink"</span>: <span class="hljs-string">"https://api.yii2-stage.test.wooppay.com/card/linkedList"</span>
+    }
+}
+</code></pre>
+<h6 id="3-">3.</h6>
+<p><strong>POST</strong> запрос</p>
+<p><strong>URL:</strong> {{form_action}}</p>
+<p>где</p>
+<p><strong>form_action</strong> - URL для авторизации на сервере обработки карточных данных</p>
+<p><strong>Входные параметры:</strong></p>
+<p><strong>Headers:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content-Type</td>
+<td>application/json</td>
+</tr>
+<tr>
+<td>language</td>
+<td>ru (по умолчанию)</td>
+</tr>
+<tr>
+<td>Time-Zone</td>
+<td>Временная зона - по умолчанию время указано в UTC-0 (Пример: Asia/Almaty)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Body:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fields</td>
+<td></td>
+<td><em>Набор данных необходимых для авторизации на сервере обработки карточных данных</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Возвращаемые параметры:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AuthLink</td>
+<td>string</td>
+<td><em>URL для авторизации на сервере обработки карточных данных</em>   </td>
+</tr>
+</tbody>
+</table>
+<p><strong>Пример запроса:</strong></p>
+<pre><code class="lang-json">{
+   <span class="hljs-attr">"FailureBackLink"</span>:<span class="hljs-string">"{{FailureBackLink}}"</span>,
+   <span class="hljs-attr">"FailurePostLink"</span>:<span class="hljs-string">"{{FailurePostLink}}"</span>,
+   <span class="hljs-attr">"Language"</span>:<span class="hljs-string">"{{Language}}"</span>,
+   <span class="hljs-attr">"Signed_Order_B64"</span>:<span class="hljs-string">"{{Signed_Order_B64}}"</span>,
+   <span class="hljs-attr">"BackLink"</span>:<span class="hljs-string">"{{BackLink}}"</span>,
+   <span class="hljs-attr">"PostLink"</span>:<span class="hljs-string">"{{PostLink}}"</span>,
+   <span class="hljs-attr">"email"</span>:<span class="hljs-string">"{{email1}}"</span>,
+   <span class="hljs-attr">"template"</span>:<span class="hljs-string">"{{template}}"</span>
+}
+</code></pre>
+<p><strong>Пример успешного ответа:</strong></p>
+<p>HTTP status code: 200 OK - Успешно. Запрошенный ресурс был найден и передан в теле ответа</p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">"AuthLink"</span>: <span class="hljs-string">"https://pci-ws.wooppay.com/cashin/app/auth?Uid=ce4c73d8-4e05-42de-8721-e841667095eb"</span>
+}
+</code></pre>
+<h6 id="4-">4.</h6>
+<p>Третий шаг привязки карты (Авторизация на сервере обработки карточных данных):</p>
+<p><strong>POST</strong> запрос</p>
+<p><strong>URL:</strong> {{AuthLink}}</p>
+<p>где</p>
+<p><strong>AuthLink</strong> - URL для авторизации на сервере обработки карточных данных (Из 3 шага сценария оплаты выставленного счета)</p>
+<p><strong>Входные параметры:</strong></p>
+<p><strong>Headers:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content-Type</td>
+<td>application/json</td>
+</tr>
+<tr>
+<td>language</td>
+<td>ru (по умолчанию)</td>
+</tr>
+<tr>
+<td>Time-Zone</td>
+<td>Временная зона - по умолчанию время указано в UTC-0 (Пример: Asia/Almaty)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Body:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>card_name</td>
+<td>string</td>
+<td><em>Имя держателя карты</em></td>
+</tr>
+<tr>
+<td>card_no_bin</td>
+<td>integer</td>
+<td><em>BIN карты</em></td>
+</tr>
+<tr>
+<td>exp_month</td>
+<td>integer</td>
+<td><em>Месяц до которого действует карта</em></td>
+</tr>
+<tr>
+<td>exp_year</td>
+<td>integer</td>
+<td><em>Год до которого действует карта</em></td>
+</tr>
+<tr>
+<td>sec_cvv2</td>
+<td>integer</td>
+<td><em>CVV</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Возвращаемые параметры:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AcsUrl</td>
+<td>string</td>
+<td><em>URL на страницу банковского процессинга для ввода 3DS</em>   </td>
+</tr>
+<tr>
+<td>Code</td>
+<td>string</td>
+<td><em>Статус запроса (00 - успешно)</em>   </td>
+</tr>
+<tr>
+<td>Reference</td>
+<td>string</td>
+<td><em>ID операции пополнения в системе WSA</em>   </td>
+</tr>
+</tbody>
+</table>
+<p><strong>Пример запроса:</strong></p>
+<pre><code class="lang-json">{
+<span class="hljs-attr">"card_name"</span>: <span class="hljs-string">"threed"</span>,
+<span class="hljs-attr">"card_no_bin"</span>: <span class="hljs-string">"5309354318902473"</span>,
+<span class="hljs-attr">"exp_month"</span>: <span class="hljs-string">"08"</span>,
+<span class="hljs-attr">"exp_year"</span>: <span class="hljs-string">"2025"</span>,
+<span class="hljs-attr">"sec_cvv2"</span>: <span class="hljs-string">"123"</span>
+}
+</code></pre>
+<p><strong>Пример успешного ответа:</strong></p>
+<p>HTTP status code: 200 OK - Успешно. Запрошенный ресурс был найден и передан в теле ответа</p>
+<p>Карта <code>3DS</code>:</p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">"AcsUrl"</span>: <span class="hljs-string">"url"</span>
+}
+</code></pre>
+<p>Карта без <code>3DS</code> :</p>
+<pre><code class="lang-JSON">{
+    <span class="hljs-attr">"Code"</span>: <span class="hljs-string">"00"</span>,
+    <span class="hljs-attr">"Reference"</span>: <span class="hljs-string">"660002000016561"</span>
+}
+</code></pre>
+<h6 id="5-">5.</h6>
+<p>Ввод 3DS на странице банковского процессинга</p>
+<h6 id="6-">6.</h6>
+<p>Подтверждение привязки (карта без 3DS)</p>
+<p><strong>PUT</strong> запрос</p>
+<p><strong>URL:</strong> {{url}}/v1/card/approve</p>
+<p><strong>Входные параметры:</strong></p>
+<p><strong>Headers:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content-Type</td>
+<td>application/json</td>
+</tr>
+<tr>
+<td>language</td>
+<td>ru (по умолчанию)</td>
+</tr>
+<tr>
+<td>Time-Zone</td>
+<td>Временная зона - по умолчанию время указано в UTC-0 (Пример: Asia/Almaty)</td>
+</tr>
+<tr>
+<td>partner-name</td>
+<td>системное имя партнера</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Body:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>reference</td>
+<td></td>
+<td><em>ID операции пополнения в системе WSA</em></td>
+</tr>
+<tr>
+<td>amount</td>
+<td></td>
+<td><em>Сумма списания</em></td>
+</tr>
+<tr>
+<td>account_number</td>
+<td></td>
+<td><em>Логин плательщика</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Пример запроса:</strong></p>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">"reference"</span>: <span class="hljs-string">"{{Reference}}"</span>,
+  <span class="hljs-attr">"amount"</span>: <span class="hljs-string">"66.66"</span>,
+  <span class="hljs-attr">"account_number"</span>: <span class="hljs-string">"{{login}}"</span>
+}
+</code></pre>
+<p><strong>Пример успешного ответа:</strong></p>
+<p>HTTP status code: 204 No Content - Успешно</p>
+<h2 id="6-2-">6.2 Получение списка привязанных карт</h2>
+<p>Получение списка привязанных карт происходит методом <strong>POST</strong> запроса</p>
+<p><strong>URL:</strong> {{url}}/v1/card</p>
+<p><strong>Входные параметры:</strong></p>
+<p><strong>Headers:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content-Type</td>
+<td><em>application/json</em></td>
+</tr>
+<tr>
+<td>language</td>
+<td><em>ru (по умолчанию)</em></td>
+</tr>
+<tr>
+<td>Authorization</td>
+<td><em>Авторизационный токен</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Возвращаемые параметры:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>int</td>
+<td><em>ID карты</em></td>
+</tr>
+<tr>
+<td>hb_id</td>
+<td>int</td>
+<td><em>ID привязки</em></td>
+</tr>
+<tr>
+<td>mask</td>
+<td>string</td>
+<td><em>Маска карты</em></td>
+</tr>
+<tr>
+<td>approve</td>
+<td>boolean</td>
+<td><em>Нужно ли допривязать карту: true - требуется допривязать, false - не требуется</em></td>
+</tr>
+<tr>
+<td>reference</td>
+<td>int</td>
+<td><em>Референс</em></td>
+</tr>
+<tr>
+<td>id</td>
+<td>int</td>
+<td><em>ID банка</em></td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td><em>Имя банка</em></td>
+</tr>
+<tr>
+<td>code</td>
+<td>string</td>
+<td><em>Национальный код банка</em></td>
+</tr>
+<tr>
+<td>bik</td>
+<td>string</td>
+<td><em>БИК</em></td>
+</tr>
+<tr>
+<td>bin</td>
+<td>int</td>
+<td><em>БИН</em></td>
+</tr>
+<tr>
+<td>picture</td>
+<td>string</td>
+<td><em>Название изображения</em></td>
+</tr>
+<tr>
+<td>picture_url</td>
+<td>string</td>
+<td><em>Ссылка на изображение</em></td>
+</tr>
+</tbody>
+</table>
+<p><em>Пример запроса:</em></p>
+<pre><code class="lang-json">{{url}}/v1/card
+</code></pre>
+<p><em>Пример успешного ответа:</em></p>
+<p>HTTP status code: 200 OK - Успешно. Запрошенный ресурс был найден и передан в теле ответа</p>
+<pre><code class="lang-json">[
+    {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-number">1254</span>,
+        <span class="hljs-attr">"hb_id"</span>: <span class="hljs-number">15752</span>,
+        <span class="hljs-attr">"mask"</span>: <span class="hljs-string">"540436-XX-XXXX-6498"</span>,
+        <span class="hljs-attr">"approve"</span>: <span class="hljs-literal">false</span>,
+                <span class="hljs-attr">"reference"</span>: <span class="hljs-string">"660002000013822"</span>,
+        <span class="hljs-attr">"bank"</span>: {
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">5</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Qazkom"</span>,
+            <span class="hljs-attr">"code"</span>: <span class="hljs-string">"KZKOKZKX"</span>,
+            <span class="hljs-attr">"bik"</span>: <span class="hljs-string">"KZKOKZKX"</span>,
+            <span class="hljs-attr">"bin"</span>: <span class="hljs-string">"540813"</span>,
+            <span class="hljs-attr">"picture"</span>: <span class="hljs-string">"594c99dad19c8.jpg"</span>,
+            <span class="hljs-attr">"picture_url"</span>: <span class="hljs-string">"https://static.test.wooppay.com/bank/594c99dad19c8.jpg"</span>
+        }
+    }
+]
+</code></pre>
+<h2 id="6-3-">6.3 Отвязка банковской карты</h2>
+<p>Отвязка банковской карты происходит методом <strong>DELETE</strong> запроса</p>
+<p><strong>URL:</strong> {{url}}/v1/card/{{card_id}}</p>
+<p>где <strong>card_id</strong> - ID привязанной карты</p>
+<p><strong>Входные параметры:</strong></p>
+<p><strong>Headers:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content-Type</td>
+<td><em>application/json</em></td>
+</tr>
+<tr>
+<td>language</td>
+<td><em>ru (по умолчанию)</em></td>
+</tr>
+<tr>
+<td>Authorization</td>
+<td><em>Авторизационный токен</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Пример запроса:</strong></p>
+<pre><code class="lang-json">{{url}}/v1/card/<span class="hljs-number">1254</span>
+</code></pre>
+<p><strong>Пример успешного ответа:</strong></p>
+<p>HTTP status code: 204 No Content - Сервер успешно обработал запрос и не возвращает содержание.
+<a name="receipt"></a></p>
+<p><a name="payment"></a></p>
+<h2 id="7-">7. Оплата вставленного счета на оплату</h2>
+<p>Сценарий оплаты:</p>
+<ol>
+<li>Оплата выставленного счета</li>
+<li>Подтверждение оплаты</li>
+</ol>
+<h6 id="1-">1.</h6>
+<p><strong>POST</strong> запрос</p>
+<p><strong>URL:</strong> {{url}}/v1/payment/native-pay-from-card</p>
+<p><strong>Входные параметры:</strong></p>
+<p><strong>Headers:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content-Type</td>
+<td>application/json</td>
+</tr>
+<tr>
+<td>language</td>
+<td>ru (по умолчанию)</td>
+</tr>
+<tr>
+<td>Time-Zone</td>
+<td>Временная зона - по умолчанию время указано в UTC-0 (Пример: Asia/Almaty)</td>
+</tr>
+<tr>
+<td>partner-name</td>
+<td>системное имя партнера</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Body:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>operation_id</td>
+<td>string</td>
+<td><em>ID операции выставленного счета на оплату (из 2 пункта содержания)</em></td>
+</tr>
+<tr>
+<td>card_id</td>
+<td>string</td>
+<td><em>ID привязанной карты)</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Возвращаемые параметры:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>form_action</td>
+<td>string</td>
+<td><em>URL для авторизации на сервере обработки карточных данных</em></td>
+</tr>
+<tr>
+<td>form_method</td>
+<td>string</td>
+<td><em>Метод запроса для авторизации на сервере обработки карточных данных</em></td>
+</tr>
+<tr>
+<td>current_user</td>
+<td>string</td>
+<td><em>Кошелек плательщика</em></td>
+</tr>
+<tr>
+<td>card_operation_id</td>
+<td>string</td>
+<td><em>ID операции пополнения</em></td>
+</tr>
+<tr>
+<td>payment_operation</td>
+<td>string</td>
+<td><em>ID операции оплаты</em></td>
+</tr>
+<tr>
+<td>card_id</td>
+<td>string</td>
+<td><em>ID карты (Если был передан ID)</em></td>
+</tr>
+<tr>
+<td>fields</td>
+<td></td>
+<td><em>Набор данных необходимых для авторизации на сервере обработки карточных данных</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Пример запроса:</strong></p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">"operation_id"</span>: <span class="hljs-string">"{{operation_id}}"</span>,
+    <span class="hljs-attr">"card_id"</span>:<span class="hljs-string">"60"</span>
+
+}
+</code></pre>
+<p><strong>Пример успешного ответа:</strong></p>
+<p>HTTP status code: 200 OK - Успешно. Запрошенный ресурс был найден и передан в теле ответа</p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">"form_action"</span>: <span class="hljs-string">"https://pci-ws.wooppay.com/cashin/app/logon"</span>,
+    <span class="hljs-attr">"form_method"</span>: <span class="hljs-string">"POST"</span>,
+    <span class="hljs-attr">"current_user"</span>: <span class="hljs-string">"G77013451222"</span>,
+    <span class="hljs-attr">"card_operation_id"</span>: <span class="hljs-string">"50866702"</span>,
+    <span class="hljs-attr">"payment_operation"</span>: <span class="hljs-string">"50866701"</span>,
+    <span class="hljs-attr">"mobile_scripts"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"card_id"</span>: <span class="hljs-string">"12"</span>,
+    <span class="hljs-attr">"fields"</span>: {
+        <span class="hljs-attr">"Signed_Order_B64"</span>: <span class="hljs-string">"PGRvY3V.....bWVudD4="</span>,
+        <span class="hljs-attr">"email"</span>: <span class="hljs-string">"example@example.com"</span>,
+        <span class="hljs-attr">"Language"</span>: <span class="hljs-string">"ru"</span>,
+        <span class="hljs-attr">"template"</span>: <span class="hljs-string">"wp-api-recharge.xsl"</span>,
+        <span class="hljs-attr">"BackLink"</span>: <span class="hljs-string">"https://api.yii2-stage.test.wooppay.com/v1/card/check-acquiring-operation?operation_id=50866702&amp;sign=PGRvY3VtZ....D4%3D"</span>,
+        <span class="hljs-attr">"FailureBackLink"</span>: <span class="hljs-string">"https://api.yii2-stage.test.wooppay.com/v1/card/check-acquiring-operation?operation_id=50866702&amp;sign=PGRvY3V....VudD4%3D"</span>,
+        <span class="hljs-attr">"PostLink"</span>: <span class="hljs-string">"https://api.yii2-stage.test.wooppay.com/v1/card/complete-card-payment?source_url=aHR0cDovL2V4YW1wbGUuY29t&amp;payment_operation=50866701&amp;specialist=G77013451234"</span>,
+        <span class="hljs-attr">"FailurePostLink"</span>: <span class="hljs-string">"https://api.yii2-stage.test.wooppay.com/v1/card/complete-card-payment?source_url=aHR0cDovL2V4YW1wbGUuY29t&amp;payment_operation=50866701&amp;specialist=G77013451234"</span>
+    }
+}
+</code></pre>
+<h6 id="2-">2.</h6>
+<p><strong>POST</strong> запрос</p>
+<p><strong>URL:</strong> {{url}}/v1/payment/native/approve-operation</p>
+<p><strong>Входные параметры:</strong></p>
+<p><strong>Headers:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content-Type</td>
+<td>application/json</td>
+</tr>
+<tr>
+<td>language</td>
+<td>ru (по умолчанию)</td>
+</tr>
+<tr>
+<td>Time-Zone</td>
+<td>Временная зона - по умолчанию время указано в UTC-0 (Пример: Asia/Almaty)</td>
+</tr>
+<tr>
+<td>partner-name</td>
+<td>системное имя партнера</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Body:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>card_operation_id</td>
+<td>string</td>
+<td><em>ID операции пополнения с карты</em></td>
+</tr>
+<tr>
+<td>current_user</td>
+<td>string</td>
+<td><em>Логин плательщика</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Пример запроса:</strong></p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">"card_operation_id"</span>: <span class="hljs-string">"{{card_operation_id}}"</span>,
+    <span class="hljs-attr">"current_user"</span>: <span class="hljs-string">"{{login}}"</span>
+}
+</code></pre>
+<p><strong>Пример успешного ответа:</strong></p>
+<p>HTTP status code: 202 Accepted - Успешно</p>
+<h2 id="8-">8. Запрос статуса операции и чека</h2>
+<p>Запрос статуса операции и чека происходит методом <strong>GET</strong> запроса</p>
+<p><strong>URL:</strong> {{url}}/v1/history/receipt/50862733,</p>
+<p>где 50862733 - ID платежа</p>
+<p><strong>Входные параметры:</strong></p>
+<p><strong>Headers:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content-Type</td>
+<td>application/json</td>
+</tr>
+<tr>
+<td>Authorization</td>
+<td><em>Авторизационный токен</em></td>
+</tr>
+<tr>
+<td>Language</td>
+<td>ru (по умолчанию)</td>
+</tr>
+<tr>
+<td>Time-Zone</td>
+<td>Временная зона - по умолчанию время указано в UTC-0 (Пример: Asia/Almaty)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Возвращаемые параметры:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>   id</td>
+<td>int</td>
+<td>ID операции</td>
+</tr>
+<tr>
+<td>   operator_title</td>
+<td>string</td>
+<td>Юридическое имя оператора</td>
+</tr>
+<tr>
+<td>   operator_bin</td>
+<td>int</td>
+<td>БИН оператора</td>
+</tr>
+<tr>
+<td>   login</td>
+<td>int</td>
+<td>Логин</td>
+</tr>
+<tr>
+<td>   time</td>
+<td>string</td>
+<td>Время проведения платежа</td>
+</tr>
+<tr>
+<td>   merchant_title</td>
+<td>string</td>
+<td>Юридическое имя мерчанта</td>
+</tr>
+<tr>
+<td>   merchant_bin</td>
+<td>int</td>
+<td>БИН мерчанта</td>
+</tr>
+<tr>
+<td>   service_title</td>
+<td>string</td>
+<td>Название сервиса</td>
+</tr>
+<tr>
+<td>   ident:</td>
+<td>массив с объектами json</td>
+<td>Поля с данными</td>
+</tr>
+<tr>
+<td>   <ol><li>title</li><li>value</li></ol></td>
+<td><ol><li>string</li><li>string</li></ol></td>
+<td><ol><li>Название поля</li><li>Значение поля</li></ol></td>
+</tr>
+<tr>
+<td>   amount</td>
+<td>float</td>
+<td>Сумма платежа</td>
+</tr>
+<tr>
+<td>   commission</td>
+<td>float</td>
+<td>Комиссия</td>
+</tr>
+<tr>
+<td>   admit</td>
+<td>float</td>
+<td>Сумма, на которую пополнится счет</td>
+</tr>
+<tr>
+<td>   vat</td>
+<td>float</td>
+<td>НДС</td>
+</tr>
+<tr>
+<td>   emitent</td>
+<td>string</td>
+<td>Имя эмитента</td>
+</tr>
+<tr>
+<td>   agent</td>
+<td>string</td>
+<td>Имя специалиста</td>
+</tr>
+<tr>
+<td>   operation_type</td>
+<td>int</td>
+<td>Тип операции</td>
+</tr>
+<tr>
+<td>   transaction</td>
+<td>объект json</td>
+<td>Поля с данными</td>
+</tr>
+<tr>
+<td>   <ol><li>status</li><li>type</li></ol></td>
+<td><ol><li>int</li><li>int</li></ol></td>
+<td><ol><li>Статус операции</li><li>Тип операции</li></ol></td>
+</tr>
+<tr>
+<td>   linked_operations</td>
+<td>Массив со string внутри</td>
+<td>Операции, связанные с данной операцией</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Пример успешного ответа:</strong></p>
+<p>HTTP status code: 200 OK - Успешно.</p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">50862733</span>,
+    <span class="hljs-attr">"operator_title"</span>: <span class="hljs-string">"ТОО \"WOOPPAY\" (ВУППЭЙ)"</span>,
+    <span class="hljs-attr">"operator_bin"</span>: <span class="hljs-string">"120340004314"</span>,
+    <span class="hljs-attr">"login"</span>: <span class="hljs-string">"77780623250"</span>,
+    <span class="hljs-attr">"time"</span>: <span class="hljs-string">"2020-04-30T14:27:11+0600"</span>,
+    <span class="hljs-attr">"merchant_title"</span>: <span class="hljs-string">"voyage-krg.kz "</span>,
+    <span class="hljs-attr">"merchant_bin"</span>: <span class="hljs-string">"120940013632"</span>,
+    <span class="hljs-attr">"service_title"</span>: <span class="hljs-string">"Title"</span>,
+    <span class="hljs-attr">"ident"</span>: [
+        {
+            <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Внешний ID"</span>,
+            <span class="hljs-attr">"value"</span>: <span class="hljs-string">"20200430082531161000"</span>
+        },
+        {
+            <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Номер телефона"</span>,
+            <span class="hljs-attr">"value"</span>: <span class="hljs-string">"7012115207"</span>
+        }
+    ],
+    <span class="hljs-attr">"amount"</span>: <span class="hljs-number">10</span>,
+    <span class="hljs-attr">"commission"</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-attr">"admit"</span>: <span class="hljs-number">10</span>,
+    <span class="hljs-attr">"vat"</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-attr">"emitent"</span>: <span class="hljs-string">"Банк"</span>,
+    <span class="hljs-attr">"agent"</span>: <span class="hljs-string">"someAgent "</span>,
+    <span class="hljs-attr">"operation_type"</span>: <span class="hljs-number">300</span>,
+    <span class="hljs-attr">"transaction"</span>: {
+        <span class="hljs-attr">"status"</span>: <span class="hljs-number">14</span>,
+        <span class="hljs-attr">"type"</span>: <span class="hljs-number">300</span>
+    },
+    <span class="hljs-attr">"linked_operations"</span>: [
+        <span class="hljs-string">"50862735"</span>
+    ]
+}
+</code></pre>
+<p>Пример запроса чека со статусом 12 - &quot;На рассмотрении&quot;</p>
+<p><strong>Пример запроса:</strong></p>
+<p><code>GET:{{domain}}/v1/history/receipt/50349355</code></p>
+<p><strong>Пример ответа:</strong></p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">50349355</span>,
+    <span class="hljs-attr">"transaction"</span>: {
+        <span class="hljs-attr">"status"</span>: <span class="hljs-number">12</span>,
+        <span class="hljs-attr">"type"</span>: <span class="hljs-number">205</span>
+    }
+}
+</code></pre>
+<p><a name="refund"></a></p>
+<h2 id="9-">9. Возврат по операции</h2>
+<h3 id="9-1-">9.1 Полный возврат</h3>
+<p>Полный возврат средств. Возврат доступен для операций на 14-ом статусе. Будут сформированы 2 операции возврата, для дочерней и родительской операций.</p>
+<p><strong>URL:</strong> {{url}}v1/reverse/</p>
+<p><strong>Входные параметры:</strong></p>
+<p><strong>Headers:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td><em>Авторизационный токен</em></td>
+</tr>
+<tr>
+<td>Content-Type</td>
+<td>application/json</td>
+</tr>
+<tr>
+<td>Language</td>
+<td>ru (по умолчанию)</td>
+</tr>
+<tr>
+<td>Time-Zone</td>
+<td>Временная зона - по умолчанию время указано в UTC-0 (Пример: Asia/Almaty)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Body:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>   operation_id</td>
+<td>string</td>
+<td>ID дочерней операции. Для проведения возврата сразу нескольких операций, разделите id операций запятой без пробела</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+<td>Комментарий</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Пример запроса:</strong></p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">"operation_id"</span>: <span class="hljs-string">"50959281"</span>,
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Test"</span>
+}
+</code></pre>
+<p><strong>Возвращаемые параметры:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>error_code</td>
+<td>integer</td>
+<td>Код возвращаемой ошибки</td>
+<td></td>
+</tr>
+<tr>
+<td>message</td>
+<td>string</td>
+<td>Ответ за в сообщении на запрос возврата</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Пример ответа:</strong></p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">"50959281"</span>: {
+        <span class="hljs-attr">"error_code"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Операция возврата проведена."</span>
+    }
+}
+</code></pre>
+<h3 id="9-2-">9.2 Частичтный возврат</h3>
+<p>Частичный возврат.Возврат доступен для операций на 14-ом статусе.
+Будут сформированы 2 операции возврата, для дочерней и родительской операций.
+(Если совершить повторный частичный возврат по одной операции, при этом будет хватать средств, то error_code будет равен 1026, но возврат пройдет успешно)</p>
+<p><strong>URL:</strong> {{url}}v1/reverse/partial-return</p>
+<p><strong>Входные параметры:</strong></p>
+<p><strong>Headers:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td><em>Авторизационный токен</em></td>
+</tr>
+<tr>
+<td>Content-Type</td>
+<td>application/json</td>
+</tr>
+<tr>
+<td>Language</td>
+<td>ru (по умолчанию)</td>
+</tr>
+<tr>
+<td>Time-Zone</td>
+<td>Временная зона - по умолчанию время указано в UTC-0 (Пример: Asia/Almaty)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Body:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>   operation_id</td>
+<td>string</td>
+<td>ID дочерней операции. Для проведения возврата сразу нескольких операций, разделите id операций запятой без пробела</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+<td>Комментарий</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>double</td>
+<td>Сумма возврата</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Пример запроса:</strong></p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">"operation_id"</span>: <span class="hljs-string">"50959295"</span>,
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Test"</span>,
+    <span class="hljs-attr">"amount"</span>: <span class="hljs-string">"100"</span>
+}
+</code></pre>
+<p><strong>Возвращаемые параметры:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>error_code</td>
+<td>integer</td>
+<td>Код возвращаемой ошибки</td>
+<td></td>
+</tr>
+<tr>
+<td>message</td>
+<td>string</td>
+<td>Ответ за в сообщении на запрос возврата</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Пример ответа:</strong></p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">"50959281"</span>: {
+        <span class="hljs-attr">"error_code"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Операция возврата проведена."</span>
+    }
+}
+</code></pre>
+<h3 id="9-3-">9.3 Мобильный возврата</h3>
+<p>Возврат средств на баланс мобильного телефона</p>
+<p><strong>URL:</strong> {{url}}v1/reverse/mobile-return</p>
+<p><strong>Входные параметры:</strong></p>
+<p><strong>Headers:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td><em>Авторизационный токен</em></td>
+</tr>
+<tr>
+<td>Content-Type</td>
+<td>application/json</td>
+</tr>
+<tr>
+<td>Language</td>
+<td>ru (по умолчанию)</td>
+</tr>
+<tr>
+<td>Time-Zone</td>
+<td>Временная зона - по умолчанию время указано в UTC-0 (Пример: Asia/Almaty)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Body:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>   operation_id</td>
+<td>string</td>
+<td>ID дочерней операции. Для проведения возврата сразу нескольких операций, разделите id операций запятой без пробела</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+<td>Комментарий</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>double</td>
+<td>Сумма возврата. Если не указывать - будет проведен полный возврат</td>
+</tr>
+<tr>
+<td>force_refund</td>
+<td>boolean</td>
+<td>Модификатор возврата по проведенному платежу, нужно отправлять true, если операция на 14-ом статусе. В других случаях не указывать</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Пример запроса:</strong></p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">"operation_id"</span>: <span class="hljs-string">"50959305"</span>,
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Test"</span>,
+  <span class="hljs-attr">"amount"</span>: <span class="hljs-string">"15"</span>,
+  <span class="hljs-attr">"force_refund"</span>: <span class="hljs-string">"true"</span>
+}
+</code></pre>
+<p><strong>Возвращаемые параметры:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>error_code</td>
+<td>integer</td>
+<td>Код возвращаемой ошибки</td>
+<td></td>
+</tr>
+<tr>
+<td>message</td>
+<td>string</td>
+<td>Ответ за в сообщении на запрос возврата</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Пример ответа:</strong></p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">"50959305"</span>: {
+        <span class="hljs-attr">"error_code"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">"message"</span>: <span class="hljs-string">"Операция возврата проведена."</span>
+    }
+}
+</code></pre>
+<p><a name="pdf"></a></p>
+<h2 id="-pdf-">Чек операции(в формате PDF)</h2>
+<p>Чек операции происходит методом <strong>GET</strong> запроса</p>
+<p><strong>URL:</strong> {{url}}/v1/history/receipt/pdf/50347630</p>
+<p>где 50347630 - ID операции</p>
+<p><strong>Входные параметры:</strong></p>
+<p><strong>Headers:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td><em>Авторизационный токен</em></td>
+</tr>
+<tr>
+<td>Content-Type</td>
+<td>application/json</td>
+</tr>
+<tr>
+<td>Language</td>
+<td>ru (по умолчанию)</td>
+</tr>
+<tr>
+<td>Time-Zone</td>
+<td>Временная зона - по умолчанию время указано в UTC-0 (Пример: Asia/Almaty)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Возвращаемые параметры:</strong></p>
+<p>Возможность скачать чек в формате PDF</p>
+<p><a name="status"></a></p>
+<h5 id="-">Возможные статусы операций</h5>
+<table>
+<thead>
+<tr>
+<th>Статус</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>11</td>
+<td><em>Новая</em></td>
+</tr>
+<tr>
+<td>12</td>
+<td><em>На рассмотрении</em>  </td>
+</tr>
+<tr>
+<td>14</td>
+<td><em>Проведена</em></td>
+</tr>
+<tr>
+<td>17</td>
+<td><em>Отменена</em></td>
+</tr>
+<tr>
+<td>19</td>
+<td><em>Ожидает проведения</em></td>
+</tr>
+<tr>
+<td>20</td>
+<td><em>Удалена</em></td>
+</tr>
+</tbody>
+</table>
+<p><a name="operation_type"></a></p>
+<h5 id="-">Типы операций</h5>
+<table>
+<thead>
+<tr>
+<th>Статус</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>203</td>
+<td><em>Пополнение кошелька</em></td>
+</tr>
+<tr>
+<td>205</td>
+<td><em>Выводы</em></td>
+</tr>
+<tr>
+<td>300</td>
+<td><em>Платежи</em></td>
+</tr>
+<tr>
+<td>304</td>
+<td><em>Инвойсы</em></td>
+</tr>
+</tbody>
+</table>
+<p><a name="error_code"></a></p>
+<h5 id="-error_code">Коды ошибок error_code</h5>
+<table>
+<thead>
+<tr>
+<th>Код</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1111</td>
+<td><em>Превышены лимиты при создании новой операции</em></td>
+</tr>
+<tr>
+<td>1140</td>
+<td><em>Неверный тип операции</em></td>
+</tr>
+<tr>
+<td>1143</td>
+<td><em>Неверный статус операции</em>  </td>
+</tr>
+<tr>
+<td>1156</td>
+<td><em>Операция запрещена</em></td>
+</tr>
+<tr>
+<td>1509</td>
+<td><em>Неверный СМС-код</em></td>
+</tr>
+<tr>
+<td>1510</td>
+<td><em>Превышено количество попыток ввода</em></td>
+</tr>
+<tr>
+<td>1512</td>
+<td><em>На балансе недостаточно средств</em></td>
+</tr>
+<tr>
+<td>1516</td>
+<td><em>Номер не зарегистрирован в MFS</em></td>
+</tr>
+<tr>
+<td>1518</td>
+<td><em>Недостаточно средств</em></td>
+</tr>
+<tr>
+<td>1522</td>
+<td><em>Неверный тарифный план</em></td>
+</tr>
+<tr>
+<td>1604</td>
+<td><em>Ошибка взаимодествия с оператором</em></td>
+</tr>
+<tr>
+<td>1606</td>
+<td><em>На балансе недостаточно средств</em></td>
+</tr>
+<tr>
+<td>1607</td>
+<td><em>Номер клиента не найден в системе MFS</em></td>
+</tr>
+<tr>
+<td>1608</td>
+<td><em>Не потрачен стартовый\бонусный баланс</em></td>
+</tr>
+<tr>
+<td>1609</td>
+<td><em>Неверный тарифный план</em></td>
+</tr>
+<tr>
+<td>1611</td>
+<td><em>Недоступно для юр.лиц</em></td>
+</tr>
+<tr>
+<td>1612</td>
+<td><em>Недоступно для абонентов в роуминге</em></td>
+</tr>
+<tr>
+<td>1613</td>
+<td><em>Данная услуга вам недоступна. Обратитесь к оператору</em></td>
+</tr>
+<tr>
+<td>2010</td>
+<td><em>Некорректная структура пакета</em></td>
+</tr>
+<tr>
+<td>3013</td>
+<td><em>Недостаточно полномочий для выполнения операции</em></td>
+</tr>
+<tr>
+<td>3027</td>
+<td><em>Операция с данным Id была использована ранее</em></td>
+</tr>
+<tr>
+<td>3037</td>
+<td><em>Неверный код подтверждения</em></td>
+</tr>
+<tr>
+<td>3038</td>
+<td><em>Ваш номер уже занят процессом оплаты, завершите оплату или подождите 5 минут</em></td>
+</tr>
+<tr>
+<td>3040</td>
+<td><em>Превышено количество попыток ввода</em></td>
+</tr>
+<tr>
+<td>3068</td>
+<td><em>Операция недоступна</em></td>
+</tr>
+<tr>
+<td>3069</td>
+<td><em>Операция не найдена</em></td>
+</tr>
+<tr>
+<td>3077</td>
+<td><em>Номер не принадлежит оператору</em></td>
+</tr>
+<tr>
+<td>4001</td>
+<td><em>Неклассифицированная ошибка</em></td>
+</tr>
+<tr>
+<td>4007</td>
+<td><em>Платёж запрещён</em></td>
+</tr>
+<tr>
+<td>4009</td>
+<td><em>Технические проблемы на стороне мерчанта</em></td>
+</tr>
+<tr>
+<td>4010</td>
+<td><em>Мерчант временно недоступен</em></td>
+</tr>
+<tr>
+<td>4013</td>
+<td><em>Неверный формат номера</em></td>
+</tr>
+<tr>
+<td>5001</td>
+<td><em>Сервис не найден</em></td>
+</tr>
+<tr>
+<td>5002</td>
+<td><em>Проверка на валидацию не прошла</em></td>
+</tr>
+<tr>
+<td>5011</td>
+<td><em>Операция не найдена</em></td>
+</tr>
+<tr>
+<td>5012</td>
+<td><em>Не найдена дочерняя операция</em></td>
+</tr>
+</tbody>
+</table>
+<p><a name="http"></a></p>
+<h4 id="-http-">Возможные коды состояния HTTP:</h4>
+<ul>
+<li>HTTP status code 201 Created<ul>
+<li>Ресурс был успешно создан в ответ на POST-запрос. Заголовок Location содержит URL, указывающий на только что созданный ресурс</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>HTTP status code 400 - Bad Request<ul>
+<li>Неверный запрос. Может быть связано с разнообразными проблемами на стороне пользователя, такими как неверные JSON-данные в теле запроса, неправильные параметры действия, и т.д.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>HTTP status code 403 - Forbidden</p>
+<ul>
+<li>У вас нет прав для пользования данным действием или ресурсом</li>
+</ul>
+</li>
+<li><p>HTTP status code 404 - Not Found</p>
+<ul>
+<li>Не удается найти данные согласно запросу</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>HTTP status code 422 - Unprocessable Entity<ul>
+<li>Проверка данных завершилась неудачно. Подробные сообщения об ошибках смотрите в теле ответа.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>HTTP status code 500 - Internal server error<ul>
+<li>Внутренняя ошибка сервера. Возможная причина — ошибки в самой программе</li>
+</ul>
+</li>
+</ul>
+</body></html>
